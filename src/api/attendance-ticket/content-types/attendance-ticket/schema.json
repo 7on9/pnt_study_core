@@ -43,6 +43,14 @@
     },
     "date": {
       "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "active",
+        "done"
+      ]
     }
   }
 }
