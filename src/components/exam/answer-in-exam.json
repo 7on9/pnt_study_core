@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_exam_answer_in_exams",
+  "info": {
+    "displayName": "AnswerInExam",
+    "icon": "edit",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question_uuid": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lesson.lesson"
+    },
+    "timestamp": {
+      "type": "datetime",
+      "required": true
+    },
+    "answer_code": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j"
+      ]
+    },
+    "question": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::question.question"
+    }
+  }
+}

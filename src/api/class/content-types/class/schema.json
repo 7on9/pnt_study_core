@@ -4,7 +4,8 @@
   "info": {
     "singularName": "class",
     "pluralName": "classes",
-    "displayName": "Class"
+    "displayName": "Class",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,10 +16,16 @@
       "type": "string",
       "required": true
     },
-    "ID": {
+    "code": {
       "type": "uid",
       "targetField": "name",
       "required": true
+    },
+    "students": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "classes"
     }
   }
 }

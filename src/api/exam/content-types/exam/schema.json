@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exams",
+  "info": {
+    "singularName": "exam",
+    "pluralName": "exams",
+    "displayName": "Exam",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "start": {
+      "type": "datetime",
+      "required": true
+    },
+    "end": {
+      "type": "datetime",
+      "required": true
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson"
+    },
+    "question_private": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "total_question": {
+      "type": "integer",
+      "required": true,
+      "min": 0,
+      "default": 0
+    },
+    "exam_code": {
+      "type": "uid",
+      "required": true
+    },
+    "exam_submissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exam-submission.exam-submission",
+      "mappedBy": "exam"
+    },
+    "questions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::question.question"
+    }
+  }
+}

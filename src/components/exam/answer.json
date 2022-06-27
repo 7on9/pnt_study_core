@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_exam_answers",
+  "info": {
+    "displayName": "Answer",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "answer": {
+      "type": "text",
+      "unique": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "code": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j"
+      ]
+    }
+  }
+}

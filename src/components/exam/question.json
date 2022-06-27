@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_exam_questions",
+  "info": {
+    "displayName": "Question",
+    "icon": "question-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "correct_answer_code": {
+      "type": "enumeration",
+      "enum": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i"
+      ],
+      "required": true
+    },
+    "uuid": {
+      "type": "string",
+      "unique": true
+    },
+    "answers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "exam.answer"
+    },
+    "lesson": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lesson.lesson"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_checked_in_students",
+  "info": {
+    "displayName": "Checked-in Student",
+    "icon": "user-check"
+  },
+  "options": {},
+  "attributes": {
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "token": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

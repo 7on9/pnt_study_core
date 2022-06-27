@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exam_submissions",
+  "info": {
+    "singularName": "exam-submission",
+    "pluralName": "exam-submissions",
+    "displayName": "ExamSubmission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "exam": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exam.exam",
+      "inversedBy": "exam_submissions"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "exam_submissions"
+    },
+    "answers": {
+      "displayName": "AnswerInExam",
+      "type": "component",
+      "repeatable": true,
+      "component": "exam.answer-in-exam"
+    }
+  }
+}
