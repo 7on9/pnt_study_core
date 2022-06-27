@@ -26,6 +26,12 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "classes"
+    },
+    "attendance_tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attendance-ticket.attendance-ticket",
+      "mappedBy": "class"
     }
   }
 }

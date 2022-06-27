@@ -85,6 +85,12 @@
       "relation": "manyToMany",
       "target": "api::class.class",
       "inversedBy": "students"
+    },
+    "attendance_tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attendance-ticket.attendance-ticket",
+      "mappedBy": "lecturer"
     }
   }
 }

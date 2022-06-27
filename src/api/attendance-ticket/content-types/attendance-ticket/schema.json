@@ -4,7 +4,8 @@
   "info": {
     "singularName": "attendance-ticket",
     "pluralName": "attendance-tickets",
-    "displayName": "Attendance ticket"
+    "displayName": "Attendance ticket",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,29 @@
       "type": "uid",
       "targetField": "name",
       "required": true
+    },
+    "checked_in_student": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.checked-in-student"
+    },
+    "lecturer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "attendance_tickets"
+    },
+    "qr": {
+      "type": "string"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class.class",
+      "inversedBy": "attendance_tickets"
+    },
+    "date": {
+      "type": "datetime"
     }
   }
 }
